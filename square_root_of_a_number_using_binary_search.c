@@ -10,41 +10,41 @@ float  square_root(int n,int k)
        while(left<right)
        {
 
-       	  float mid=(left+right)/2;
+       	        float mid=(left+right)/2;
 
          	mid=mid*pow(10,k);
-          mid=(int)(mid);
-
+                mid=(int)(mid);
          	mid/=pow(10,k);
 
 
 
-       if((float)(mid*mid)<=n)
-       	{
-       	     	ans=mid;
+          if((float)(mid*mid)<=n)
+         	{
+       	     	        ans=mid;
 
        		  	left=mid*pow(10,k);
        		  	left=(int)left;
        		  	left++;
        		  	left/=pow(10,k);
 
-       	}
+         	}
        	else
-       	{
-       	     	right=mid*pow(10,k);
-       	     	right=(int)right;
+        	{
+       	     	        right=mid*pow(10,k);
+       	         	right=(int)right;
        		  	right/=pow(10,k);
-       	}
+        	}
+	       
        }
 
-            return ans;
+                       return ans;
 
 }
 int main()
 {
-   	int n,k ;
+   	  int n,k ;
 	  scanf("%d%d",&n,&k);
-   	float ans=square_root(n,k);
+   	  float ans=square_root(n,k);
 
-    printf("%g",ans);
+          printf("%g",ans);
 }
